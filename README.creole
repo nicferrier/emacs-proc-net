@@ -5,4 +5,25 @@ Managing network processes is a pain on Emacs.
 So I made this little tool. Hopefully it will be a collection of tools
 eventually.
 
+=== What it looks like ===
+
 {{screenshot.png}}
+
+
+=== How to use it ===
+
+Install it
+(from [[http://marmalade-repo.org/packages/proc-net|marmalade]]) and
+then:
+
+{{{
+M-x list-network-processes
+}}}
+
+to get the list.
+
+You can click on the buffer name to take you to a buffer of a network
+process.
+
+You can click on the {{{listen}}} status to take you to the filter
+function of a listening server process.
