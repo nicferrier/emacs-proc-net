@@ -78,6 +78,7 @@
            ("Address" 10 nil)])
     (tabulated-list-init-header))
 
+;;;###autoload
 (defun process-network-list-processes ()
   "List running network processes."
   (interactive)
@@ -86,6 +87,7 @@
     (tabulated-list-print)
     (switch-to-buffer (current-buffer))))
 
+;;;###autoload
 (defalias 'list-network-processes 'process-network-list-processes)
 
 (provide 'proc-net)
