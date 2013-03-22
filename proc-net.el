@@ -25,7 +25,7 @@
 
 ;;; Code:
 
-(require 'tabulated-list-mode)
+(require 'tabulated-list)
 
 (defun process-network-show-function (button)
   "Find the filter for the specified net proc."
