@@ -6,6 +6,7 @@
 ;; Keywords: processes
 ;; Version: 0.0.1
 ;; Url: http://github.com/nicferrier/emacs-procnet
+;; Package-Requires: ((cl-lib "0.5"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -27,6 +28,7 @@
 ;;; Code:
 
 (require 'tabulated-list)
+(require 'cl-lib)
 
 (defun process-network-show-function (button)
   "Find the filter for the specified net proc."
@@ -36,7 +38,7 @@
 
 (defun process-network/list-entries ()
   "List of processes in `tabulated-list-mode' format."
-  (loop for proc in (process-list)
+  (cl-loop for proc in (process-list)
      with addr
      do (setq addr (process-contact proc))
      if (not (eq addr 't))
